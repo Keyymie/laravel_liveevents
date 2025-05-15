@@ -16,5 +16,5 @@ class PointMap extends Model
         'longitude',
     ];
 
-    public $timestamps = false; // si tu n'as pas created_at et updated_at dans la table
+    public $timestamps = false; 
 }
