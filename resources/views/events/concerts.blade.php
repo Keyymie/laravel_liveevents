@@ -89,8 +89,6 @@
 <script src="{{ asset('js/map.js') }}" defer></script>
 
 
-
-{{-- Inclure les fichiers CSS et JS --}}
 <link rel="stylesheet" href="{{ asset('css/notifications.css') }}">
 <script src="{{ asset('js/notifications.js') }}" defer></script>
 <script src="{{ asset('js/map.js') }}"defer></script>
