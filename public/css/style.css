@@ -121,8 +121,8 @@ body {
 
 #events-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-    gap: 10px; /* Espacement entre les colonnes */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
     width: 90%;
     margin: auto;
 }
@@ -489,9 +489,9 @@ footer a {
 }
 
 
-/* Section 1: Image pleine largeur avec texte par-dessus */
+
 .section-full-width-image {
-    position: relative; /* Pour positionner le texte par-dessus l'image */
+    position: relative; 
     width: 100%;
 }
 
@@ -507,21 +507,21 @@ footer a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Zone blanche semi-transparente */
-    padding: 40px; /* Augmentation du padding */
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 40px; 
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'ombre */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .overlay-text h2 {
-    font-size: 3.5rem; /* Taille du titre augmentée */
+    font-size: 3.5rem; 
     color: #333;
     margin-bottom: 20px;
 }
 
 .overlay-text p {
-    font-size: 1.8rem; /* Taille du texte augmentée */
+    font-size: 1.8rem; 
     color: #666;
 }
 
@@ -576,7 +576,7 @@ footer a {
 .image-left {
     width: 40%;
     height: auto;
-    order: -1; /* Pour afficher l'image à gauche */
+    order: -1; 
 }
 
 .text-left {
