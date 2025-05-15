@@ -35,7 +35,6 @@
         <label>Horaire :</label><br>
         <input type="text" name="horaire" value="{{ old('horaire') }}"><br><br>
 
-        {{-- Catégorie cachée --}}
         <input type="hidden" name="category_id" value="{{ $concertCategory->id }}">
 
         <input type="submit" value="Ajouter le concert">
