@@ -38,7 +38,7 @@
 
 
     <main class="mainHome">
-<!-- Section 1 : Image pleine largeur avec texte par-dessus -->
+<!-- Section -->
 <section class="section-full-width-image">
     <img src="{{ asset('img/ambiance2.jpeg') }}" alt="Image pleine largeur" class="full-width-image">
     <div class="overlay-text">
@@ -47,7 +47,7 @@
     </div>
 </section>
 
-    <!-- Section 3 : Image à droite avec du texte -->
+    <!-- Section -->
     <section class="section-image-right-text">
         <div class="text-right">
             <h2 class="section-title">Notre Programme</h2>
@@ -56,7 +56,7 @@
         <img src="{{ asset('img/image-droite.jpg') }}" alt="Programme du festival" class="image-right">
     </section>
 
-    <!-- Section 4 : Image à gauche avec du texte -->
+    <!-- Section -->
     <section class="section-image-left-text">
         <img src="{{ asset('img/ambiance.webp') }}" alt="Ambiance du festival" class="image-left">
         <div class="text-left">
@@ -68,19 +68,15 @@
 
     <footer>
     <div >
-        <!-- Nom de la compagnie -->
         <p class="le_footer">Live Events</p>
     </div>
     <div>
-        <!-- Liens vers les réseaux sociaux -->
         <a href="https://twitter.com/votrecompte" target="_blank"><i class="fab fa-twitter">&nbsp;Twitter</i></a>
         <a href="https://www.instagram.com/votrecompte" target="_blank"><i class="fab fa-instagram">&nbsp;Instagram</i></a>
         <a href="https://www.facebook.com/votrepage" target="_blank"><i class="fab fa-facebook">&nbsp;Facebook</i></a>
     </div>
     <div>
-        <!-- Mentions légales -->
         <p class="le_footer">Mentions légales</p>
     </div>
 </footer>
-<!-- https://codepen.io/Emmanuel-the-vuer/pen/rNbqKLw -->
 </body>
