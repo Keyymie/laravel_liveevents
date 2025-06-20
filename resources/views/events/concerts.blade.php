@@ -18,13 +18,18 @@
 {{-- Notifications Importantes --}}
 @if ($importantNotifs->isNotEmpty())
     <div class="notification-block">
-        <!-- <h2>Notifications Importantes</h2> -->
         <div class="notifications-container" id="important-notifs">
             @foreach ($importantNotifs as $notif)
                 <div class="notification-item important">
                     <h3>{{ $notif->title }}</h3>
                     <p>{{ $notif->message }}</p>
                     <p><small>Date : {{ $notif->date }}</small></p>
+                    
+                    @auth
+                        @if (Auth::user()->type === 'admin')
+                            <a href="{{ route('notifications.edit', $notif->id) }}">[Modifier]</a>
+                        @endif
+                    @endauth
                 </div>
             @endforeach
         </div>
@@ -64,22 +69,26 @@
     @endif
 @endauth
 
+{{-- Notifications Générales --}}
 @if ($generalNotifs->isNotEmpty())
     <div class="notification-block">
-        <!-- <h2>Notifications Générales</h2> -->
         <div class="notifications-container" id="general-notifs">
             @foreach ($generalNotifs as $notif)
                 <div class="notification-item general">
                     <h3>{{ $notif->title }}</h3>
                     <p>{{ $notif->message }}</p>
                     <p><small>Date : {{ $notif->date }}</small></p>
+                    
+                    @auth
+                        @if (Auth::user()->type === 'admin')
+                            <a href="{{ route('notifications.edit', $notif->id) }}">[Modifier]</a>
+                        @endif
+                    @endauth
                 </div>
             @endforeach
         </div>
     </div>
 @endif
-
-
 
 <div id="map" style="width: 100%; height: 500px;"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-3mksMCm7o6kY3YCzzA1GZDJjAzGFcf8&callback=initMap"></script>
@@ -88,8 +97,8 @@
 </script>
 <script src="{{ asset('js/map.js') }}" defer></script>
 
-
+{{-- Inclure les fichiers CSS et JS --}}
 <link rel="stylesheet" href="{{ asset('css/notifications.css') }}">
 <script src="{{ asset('js/notifications.js') }}" defer></script>
-<script src="{{ asset('js/map.js') }}"defer></script>
+<script src="{{ asset('js/map.js') }}" defer></script>
 @endsection
