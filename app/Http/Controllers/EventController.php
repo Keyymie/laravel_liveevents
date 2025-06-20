@@ -121,6 +121,30 @@ public function storeNotification(Request $request)
     return redirect()->route('notifications.create')->with('success', 'Notification ajoutée avec succès.');
 }
 
+public function editNotification($id)
+{
+    $notification = Notification::findOrFail($id);
+    return view('notifications.edit_notification', compact('notification'));
+}
+public function updateNotification(Request $request, $id)
+{
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'message' => 'required|string',
+        'type' => 'required|in:important,general,normal',
+    ]);
+
+    $notification = Notification::findOrFail($id);
+    $notification->update([
+        'title' => $request->title,
+        'message' => $request->message,
+        'type' => $request->type,
+    ]);
+
+    return redirect()->route('notifications.edit', $id)->with('success', 'Notification mise à jour avec succès.');
+}
+
+
 
 /// Regarde que la partie concerts
 public function showConcerts()
