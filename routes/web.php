@@ -64,5 +64,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     
     Route::get('/notifications/create', [EventController::class, 'createNotification'])->name('notifications.create');
     Route::post('/notifications', [EventController::class, 'storeNotification'])->name('notifications.store');
-});
+    Route::get('/notifications/{id}/edit', [NotificationController::class, 'editNotification'])->name('notifications.edit');
+    Route::put('/notifications/{id}', [NotificationController::class, 'updateNotification'])->name('notifications.update');
 
+});
